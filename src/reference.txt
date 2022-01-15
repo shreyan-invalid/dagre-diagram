@@ -1,0 +1,28 @@
+{
+[
+class1: {
+  id: int, //c_int
+  path: "", //Absolute path of file containing the class in local and url in Github
+  lineNumber: , //Int showing starting line of the class
+  accessModifier: [public, private, protected, default], 
+  nodes: [{name:"",  id: int}] // id: m_int //node - method in a class.
+}
+
+class2: {
+  
+} ]
+
+[
+node_id: {
+  name: "",
+  className: "",
+  lineNumber: int, 
+  accessModifier: [public, private, protected, default], 
+  arguments: [] //array of strings- dataType
+  returnType: [] //array of strings- dataType
+  toNodes: [{nodeName: "", nodeId: , className: "" }, {}] //edges leading to the node.
+  fromEdges: [{nodeName: "", nodeId: , className: "" }, {}] //edges leading out from the node.
+} ]
+
+}
+

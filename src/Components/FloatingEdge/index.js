@@ -24,8 +24,8 @@ const edgeTypes = {
   floating: FloatingEdge,
 };
 
-const nodeWidth = 172;
-const nodeHeight = 73;
+const nodeWidth = 342;
+const nodeHeight = 203;
 
 const getLayoutedElements = (elements, direction = "TB") => {
   const isHorizontal = direction === "LR";
@@ -71,14 +71,14 @@ const NodeAsHandleFlow = () => {
   const onConnect = (params) =>
     setElements((els) =>
       addEdge(
-        { ...params, type: "floating", arrowHeadType: ArrowHeadType.Arrow },
+        params,
         els
       )
     );
 
   const style = {
     width: "100%",
-    height: "90vh",
+    height: "100vh",
   };
 
   return (

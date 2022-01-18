@@ -1,10 +1,10 @@
-
-import './App.css';
+import "./App.css";
 import Overview from './Components/Overview/index';
 import FloatingEdge from './Components/FloatingEdge/index.js';
 import Layouting from './Components/Layouting/index.js';
 import BusinessFlow from './Components/BusinessFlow/index';
-import { useState, useEffect } from 'react';
+// import Interview from "./Components/Interview/Interview";
+import { useState, useEffect } from "react";
 
 function App() {
   const [diagram, setDiagram]= useState("");

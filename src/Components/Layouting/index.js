@@ -44,8 +44,8 @@ const getLayoutedElements = (elements, direction = 'BR') => {
       // to notify react flow about the change. Moreover we are shifting the dagre node position
       // (anchor=center center) to the top left so it matches the react flow node anchor point (top left).
       el.position = {
-        x: nodeWithPosition.x - nodeWidth*200 + Math.random() / 1000,
-        y: yVal+ 100,
+        x: nodeWithPosition.x - nodeWidth/2 + Math.random() / 1000,
+        y:  nodeWithPosition.x - nodeHeight/2
       };
     }
 
@@ -85,10 +85,10 @@ const LayoutFlow = () => {
           elements={elements}
           onConnect={onConnect}
           onElementsRemove={onElementsRemove}
-          connectionLineType="floating"
+          connectionLineType="smoothstep"
         />
         <div className="controls">
-          <button onClick={() => onLayout()}>vertical layout</button>
+          <button onClick={() => onLayout('BR')}>vertical layout</button>
           <button onClick={() => onLayout('LR')}>horizontal layout</button>
         </div>
       </ReactFlowProvider>
